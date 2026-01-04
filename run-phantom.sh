@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Starting GhostGPT with Tauri + Python Backend"
+echo "Starting Phantom with Tauri + Python Backend"
 echo ""
 
 # Check OPENAI_API_KEY
@@ -25,7 +25,7 @@ npm run tauri:dev &
 TAURI_PID=$!
 
 echo ""
-echo "GhostGPT is starting!"
+echo "Phantom is starting!"
 echo "   Backend: http://localhost:5001"
 echo "   Window: Tauri (invisible in recordings)"
 echo ""

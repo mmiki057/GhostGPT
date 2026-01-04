@@ -301,7 +301,7 @@ function MessageList({ messages }: MessageListProps) {
     <div className="message-list" ref={containerRef}>
       {messages.length === 0 ? (
         <div className="empty-state">
-          <p>GhostGPT is ready to assist</p>
+          <p>Phantom is ready to assist</p>
           <p className="hint">
             Press Cmd+Shift+G to show/hide
             <br />

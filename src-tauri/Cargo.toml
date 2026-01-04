@@ -1,5 +1,5 @@
 [package]
-name = "ghostgpt"
+name = "phantom"
 version = "0.1.0"
 description = "AI overlay assistant for macOS"
 authors = ["you"]

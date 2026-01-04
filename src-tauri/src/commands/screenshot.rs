@@ -20,7 +20,7 @@ async fn capture_screenshot_impl() -> Result<String> {
         .duration_since(std::time::UNIX_EPOCH)
         .unwrap()
         .as_secs();
-    let temp_path = temp_dir.join(format!("ghostgpt_screenshot_{}.png", timestamp));
+    let temp_path = temp_dir.join(format!("phantom_screenshot_{}.png", timestamp));
 
     // Capture screenshot using macOS screencapture command
     let output = Command::new("screencapture")

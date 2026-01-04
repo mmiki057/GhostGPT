@@ -251,7 +251,7 @@ def capture_screenshot():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    print("GhostGPT Backend Server Starting...")
+    print("Phantom Backend Server Starting...")
     print(f"Running on http://localhost:5001")
     print(f"Recording mode: Manual (toggle with Cmd+Enter)")
 

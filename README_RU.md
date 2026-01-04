@@ -1,4 +1,4 @@
-# GhostGPT
+# Phantom
 
 Приложение для общения с ChatGPT через голос и скриншоты с невидимым в записях экрана окном.
 
@@ -15,7 +15,7 @@
 ### Режим разработки
 
 ```bash
-./run-ghostgpt.sh
+./run-phantom.sh
 ```
 
 ### Сборка приложения
@@ -24,7 +24,7 @@
 npm run tauri:build
 ```
 
-Готовое приложение: `src-tauri/target/release/bundle/macos/GhostGPT.app`
+Готовое приложение: `src-tauri/target/release/bundle/macos/Phantom.app`
 
 ### Запуск собранного приложения
 
@@ -55,7 +55,7 @@ echo "OPENAI_API_KEY=sk-ваш-ключ" > .env
 
 3. **Запустите**:
 ```bash
-./run-ghostgpt.sh
+./run-phantom.sh
 ```
 
 ## Горячие клавиши
@@ -119,8 +119,8 @@ npm run tauri:build -- --bundles dmg
 ```
 
 Файлы будут в:
-- **Приложение**: `src-tauri/target/release/bundle/macos/GhostGPT.app`
-- **DMG**: `src-tauri/target/release/bundle/dmg/GhostGPT_*.dmg`
+- **Приложение**: `src-tauri/target/release/bundle/macos/Phantom.app`
+- **DMG**: `src-tauri/target/release/bundle/dmg/Phantom_*.dmg`
 
 **Важно**: Backend (Python сервер) нужно запускать отдельно. Используйте `start-production.sh` для автоматического запуска обоих компонентов.
 
@@ -129,7 +129,7 @@ npm run tauri:build -- --bundles dmg
 ### Структура проекта
 
 ```
-GhostGPT/
+Phantom/
 ├── src/                      # React компоненты
 │   ├── App.tsx              # Главный компонент
 │   ├── components/
@@ -168,15 +168,15 @@ kill -9 <PID>
 
 ### Приложение не появляется
 - Проверьте, что backend запущен: `curl http://localhost:5001/health`
-- Проверьте логи: `cat /tmp/ghostgpt-backend.log`
+- Проверьте логи: `cat /tmp/phantom-backend.log`
 
 ### Не работает микрофон
 Разрешите доступ к микрофону:
-System Preferences → Security & Privacy → Microphone → включите Terminal/GhostGPT
+System Preferences → Security & Privacy → Microphone → включите Terminal/Phantom
 
 ### Не работают скриншоты
 Разрешите доступ к записи экрана:
-System Preferences → Security & Privacy → Screen Recording → включите Terminal/GhostGPT
+System Preferences → Security & Privacy → Screen Recording → включите Terminal/Phantom
 
 ## Дополнительная документация
 

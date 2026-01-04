@@ -1,9 +1,9 @@
-# GhostGPT - Быстрый старт
+# Phantom - Быстрый старт
 
 ## Для разработки
 
 ```bash
-./run-ghostgpt.sh
+./run-phantom.sh
 ```
 
 ## Сборка приложения
@@ -12,7 +12,7 @@
 npm run tauri:build
 ```
 
-Приложение будет находиться в: `src-tauri/target/release/bundle/macos/GhostGPT.app`
+Приложение будет находиться в: `src-tauri/target/release/bundle/macos/Phantom.app`
 
 ## Запуск собранного приложения
 
@@ -43,7 +43,7 @@ echo "OPENAI_API_KEY=ваш-ключ" > .env
 
 3. **Запустите в режиме разработки**:
 ```bash
-./run-ghostgpt.sh
+./run-phantom.sh
 ```
 
 ## Горячие клавиши

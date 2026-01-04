@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2.0",
-  "productName": "GhostGPT",
+  "productName": "Phantom",
   "version": "0.1.0",
-  "identifier": "com.ghostgpt.app",
+  "identifier": "com.phantom.assistant",
   "build": {
     "beforeDevCommand": "npm run dev",
     "devUrl": "http://localhost:5173",
@@ -21,7 +21,8 @@
     ],
     "macOS": {
       "minimumSystemVersion": "10.15",
-      "exceptionDomain": "api.openai.com"
+      "exceptionDomain": "api.openai.com",
+      "infoPlist": "./Info.plist"
     }
   },
   "app": {
@@ -29,7 +30,7 @@
     "macOSPrivateApi": true,
     "windows": [
       {
-        "title": "GhostGPT",
+        "title": "Phantom",
         "width": 400,
         "height": 500,
         "resizable": true,
@@ -45,7 +46,7 @@
       }
     ],
     "security": {
-      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://api.openai.com"
+      "csp": "default-src 'self' http://localhost:5001 http://127.0.0.1:5001; connect-src 'self' http://localhost:5001 http://127.0.0.1:5001 https://api.openai.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://api.openai.com; script-src 'self' 'unsafe-inline'"
     }
   },
   "plugins": {

@@ -4,29 +4,29 @@
 <dict>
     <!-- Screen Recording Permission -->
     <key>NSScreenCaptureUsageDescription</key>
-    <string>GhostGPT needs screen recording access to capture screenshots for AI analysis during meetings and work sessions.</string>
+    <string>Phantom needs screen recording access to capture screenshots for AI analysis during meetings and work sessions.</string>
 
     <!-- Accessibility (if needed for advanced window management) -->
     <key>NSAppleEventsUsageDescription</key>
-    <string>GhostGPT needs accessibility permissions to function as an overlay assistant.</string>
+    <string>Phantom needs accessibility permissions to function as an overlay assistant.</string>
 
     <!-- Camera (if future feature) -->
     <key>NSCameraUsageDescription</key>
-    <string>GhostGPT may use your camera for enhanced AI assistance.</string>
+    <string>Phantom may use your camera for enhanced AI assistance.</string>
 
     <!-- Microphone -->
     <key>NSMicrophoneUsageDescription</key>
-    <string>GhostGPT needs microphone access to capture screen audio during meetings for real-time AI assistance.</string>
+    <string>Phantom needs microphone access to capture screen audio during meetings for real-time AI assistance.</string>
 
     <!-- Bundle Configuration -->
     <key>CFBundleName</key>
-    <string>GhostGPT</string>
+    <string>Phantom</string>
 
     <key>CFBundleDisplayName</key>
-    <string>GhostGPT</string>
+    <string>Phantom</string>
 
     <key>CFBundleIdentifier</key>
-    <string>com.ghostgpt.app</string>
+    <string>com.phantom.assistant</string>
 
     <key>CFBundleVersion</key>
     <string>1.0.0</string>
@@ -38,7 +38,7 @@
     <string>APPL</string>
 
     <key>CFBundleExecutable</key>
-    <string>ghostgpt</string>
+    <string>phantom</string>
 
     <!-- UI Configuration -->
     <key>LSUIElement</key>

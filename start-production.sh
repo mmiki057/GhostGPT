@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Starting GhostGPT Production"
+echo "Starting Phantom Production"
 echo ""
 
 # Определяем директорию скрипта
@@ -42,11 +42,11 @@ fi
 # Активируем виртуальное окружение и запускаем backend
 echo "Starting Python backend on http://localhost:5001..."
 source venv/bin/activate
-python3 backend/server.py > /tmp/ghostgpt-backend.log 2>&1 &
+python3 backend/server.py > /tmp/phantom-backend.log 2>&1 &
 BACKEND_PID=$!
 
 # Сохраняем PID для последующей остановки
-echo $BACKEND_PID > /tmp/ghostgpt-backend.pid
+echo $BACKEND_PID > /tmp/phantom-backend.pid
 
 # Ждем запуска backend
 sleep 3
@@ -54,14 +54,14 @@ sleep 3
 # Проверяем, что backend запустился
 if ! lsof -Pi :5001 -sTCP:LISTEN -t >/dev/null ; then
     echo "Error: Backend did not start"
-    echo "Check logs: cat /tmp/ghostgpt-backend.log"
+    echo "Check logs: cat /tmp/phantom-backend.log"
     exit 1
 fi
 
 echo "Backend started (PID: $BACKEND_PID)"
 
 # Проверяем наличие собранного приложения
-APP_PATH="src-tauri/target/release/bundle/macos/GhostGPT.app"
+APP_PATH="src-tauri/target/release/bundle/macos/Phantom.app"
 if [ ! -d "$APP_PATH" ]; then
     echo "Error: Application not found at $APP_PATH"
     echo "Build first: npm run tauri:build"
@@ -70,14 +70,14 @@ if [ ! -d "$APP_PATH" ]; then
 fi
 
 # Запускаем приложение
-echo "Starting GhostGPT..."
+echo "Starting Phantom..."
 open "$APP_PATH"
 
 echo ""
-echo "GhostGPT started!"
+echo "Phantom started!"
 echo ""
 echo "   Backend: http://localhost:5001 (PID: $BACKEND_PID)"
-echo "   Backend logs: /tmp/ghostgpt-backend.log"
+echo "   Backend logs: /tmp/phantom-backend.log"
 echo ""
 echo "   Hotkeys:"
 echo "   - Cmd+Shift+Space: Show/Hide window"

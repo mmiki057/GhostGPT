@@ -343,7 +343,7 @@ function App() {
   return (
     <div className="app-container">
       <div className="window-header" data-tauri-drag-region>
-        <h1>GhostGPT</h1>
+        <h1>Phantom</h1>
         <div className="status">
           {isLoading ? 'Thinking...' : isRecording ? 'Recording...' : 'Ready'}
         </div>
